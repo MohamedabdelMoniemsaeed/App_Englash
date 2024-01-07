@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:tuko/models/data_colors.dart';
+import 'package:tuko/models/colors/data_colors.dart';
+import 'package:tuko/models/colors/image_colors.dart';
+import 'package:tuko/models/colors/sound_colors.dart';
 import 'package:tuko/screen/details/details.dart';
 import 'package:tuko/screen/numbers/widget/numberrow.dart';
-import 'package:tuko/theme/image_colors.dart';
 
 class ColorsScreen extends StatelessWidget {
   const ColorsScreen({super.key});
@@ -18,6 +19,7 @@ class ColorsScreen extends StatelessWidget {
               context,
               MaterialPageRoute(
                   builder: (_) => Details(
+                      sounds: SoundColors.black,
                       passimage: ImageColors.black,
                       nameEnglish: DataColors.black,
                       nameArbic: 'اسود')));
@@ -31,6 +33,7 @@ class ColorsScreen extends StatelessWidget {
               context,
               MaterialPageRoute(
                   builder: (_) => Details(
+                      sounds: SoundColors.brown,
                       passimage: ImageColors.brown,
                       nameEnglish: DataColors.brown,
                       nameArbic: 'بني')));
@@ -44,6 +47,7 @@ class ColorsScreen extends StatelessWidget {
               context,
               MaterialPageRoute(
                   builder: (_) => Details(
+                      sounds: SoundColors.dustyyellow,
                       passimage: ImageColors.dustyyellow,
                       nameEnglish: DataColors.dustyyellow,
                       nameArbic: 'أصفر\nمغبر')));
@@ -57,6 +61,7 @@ class ColorsScreen extends StatelessWidget {
               context,
               MaterialPageRoute(
                   builder: (_) => Details(
+                      sounds: SoundColors.gray,
                       passimage: ImageColors.gray,
                       nameEnglish: DataColors.gray,
                       nameArbic: 'رمادي')));
@@ -70,6 +75,7 @@ class ColorsScreen extends StatelessWidget {
               context,
               MaterialPageRoute(
                   builder: (_) => Details(
+                      sounds: SoundColors.green,
                       passimage: ImageColors.green,
                       nameEnglish: DataColors.green,
                       nameArbic: 'اخضر')));
@@ -83,6 +89,7 @@ class ColorsScreen extends StatelessWidget {
               context,
               MaterialPageRoute(
                   builder: (_) => Details(
+                      sounds: SoundColors.red,
                       passimage: ImageColors.red,
                       nameEnglish: DataColors.red,
                       nameArbic: 'احمر')));
@@ -96,6 +103,7 @@ class ColorsScreen extends StatelessWidget {
               context,
               MaterialPageRoute(
                   builder: (_) => Details(
+                      sounds: SoundColors.white,
                       passimage: ImageColors.white,
                       nameEnglish: DataColors.white,
                       nameArbic: 'ابيض')));
@@ -109,6 +117,7 @@ class ColorsScreen extends StatelessWidget {
               context,
               MaterialPageRoute(
                   builder: (_) => Details(
+                      sounds: SoundColors.yellow,
                       passimage: ImageColors.yellow,
                       nameEnglish: DataColors.yellow,
                       nameArbic: 'أصفر')));

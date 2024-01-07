@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:tuko/models/numbers/image_number.dart';
 import 'package:tuko/screen/colors/colors_Screen.dart';
 import 'package:tuko/screen/family/family_screen.dart';
 import 'package:tuko/screen/numbers/numbers_Screen.dart';
 import 'package:tuko/screen/widget/tapRow.dart';
-import 'package:tuko/theme/image_number.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});

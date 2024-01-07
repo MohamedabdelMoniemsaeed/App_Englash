@@ -9,3 +9,4 @@ abstract class ImageColors {
   static String white = 'assets/images/colors/color_white.png';
   static String yellow = 'assets/images/colors/yellow.png';
 }
+

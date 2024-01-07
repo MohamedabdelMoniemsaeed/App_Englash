@@ -1,8 +1,3 @@
-import 'package:flutter/material.dart';
-import 'package:tuko/theme/image_number.dart';
-
-import '../screen/numbers/widget/numberrow.dart';
-
 abstract class DataNumber {
   static String one = 'One';
   static String two = 'Two';
@@ -14,5 +9,4 @@ abstract class DataNumber {
   static String eight = 'Eight';
   static String nine = 'Nine';
   static String ten = 'Ten';
- 
 }

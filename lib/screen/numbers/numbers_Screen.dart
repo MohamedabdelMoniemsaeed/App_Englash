@@ -1,8 +1,10 @@
+// ignore: file_names
 import 'package:flutter/material.dart';
-import 'package:tuko/models/data_number.dart';
+import 'package:tuko/models/numbers/data_number.dart';
+import 'package:tuko/models/numbers/image_number.dart';
+import 'package:tuko/models/numbers/sound_number.dart';
 import 'package:tuko/screen/details/details.dart';
 import 'package:tuko/screen/numbers/widget/numberrow.dart';
-import 'package:tuko/theme/image_number.dart';
 
 class NumbersScreen extends StatelessWidget {
   const NumbersScreen({super.key});
@@ -18,6 +20,7 @@ class NumbersScreen extends StatelessWidget {
                 context,
                 MaterialPageRoute(
                     builder: (context) => Details(
+                          sounds: SoundNumber.one,
                           passimage: ImageNumber.one,
                           nameEnglish: DataNumber.one,
                           nameArbic: 'واحد',
@@ -31,6 +34,7 @@ class NumbersScreen extends StatelessWidget {
                 context,
                 MaterialPageRoute(
                     builder: (context) => Details(
+                          sounds: SoundNumber.two,
                           passimage: ImageNumber.two,
                           nameEnglish: DataNumber.two,
                           nameArbic: 'اثنين',
@@ -44,6 +48,7 @@ class NumbersScreen extends StatelessWidget {
                 context,
                 MaterialPageRoute(
                     builder: (context) => Details(
+                          sounds: SoundNumber.three,
                           passimage: ImageNumber.three,
                           nameEnglish: DataNumber.three,
                           nameArbic: 'ثلاثة',
@@ -57,6 +62,7 @@ class NumbersScreen extends StatelessWidget {
                 context,
                 MaterialPageRoute(
                     builder: (context) => Details(
+                          sounds: SoundNumber.four,
                           passimage: ImageNumber.four,
                           nameEnglish: DataNumber.four,
                           nameArbic: 'أربعة',
@@ -70,6 +76,7 @@ class NumbersScreen extends StatelessWidget {
                 context,
                 MaterialPageRoute(
                     builder: (context) => Details(
+                          sounds: SoundNumber.five,
                           passimage: ImageNumber.five,
                           nameEnglish: DataNumber.five,
                           nameArbic: 'خمسة',
@@ -83,6 +90,7 @@ class NumbersScreen extends StatelessWidget {
                 context,
                 MaterialPageRoute(
                     builder: (context) => Details(
+                          sounds: SoundNumber.six,
                           passimage: ImageNumber.six,
                           nameEnglish: DataNumber.six,
                           nameArbic: 'ستة',
@@ -96,6 +104,7 @@ class NumbersScreen extends StatelessWidget {
                 context,
                 MaterialPageRoute(
                     builder: (context) => Details(
+                          sounds: SoundNumber.seven,
                           passimage: ImageNumber.seven,
                           nameEnglish: DataNumber.seven,
                           nameArbic: 'سبعة',
@@ -109,6 +118,7 @@ class NumbersScreen extends StatelessWidget {
                 context,
                 MaterialPageRoute(
                     builder: (context) => Details(
+                          sounds: SoundNumber.eight,
                           passimage: ImageNumber.eight,
                           nameEnglish: DataNumber.eight,
                           nameArbic: 'ثمانية',
@@ -122,6 +132,7 @@ class NumbersScreen extends StatelessWidget {
                 context,
                 MaterialPageRoute(
                     builder: (context) => Details(
+                          sounds: SoundNumber.nine,
                           passimage: ImageNumber.nine,
                           nameEnglish: DataNumber.nine,
                           nameArbic: 'تسع',
@@ -135,6 +146,7 @@ class NumbersScreen extends StatelessWidget {
                 context,
                 MaterialPageRoute(
                     builder: (context) => Details(
+                          sounds: SoundNumber.ten,
                           passimage: ImageNumber.ten,
                           nameEnglish: DataNumber.ten,
                           nameArbic: 'عشرة',

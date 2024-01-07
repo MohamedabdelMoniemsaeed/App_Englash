@@ -37,6 +37,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   flutter_spacer: ^1.0.3
   auto_size_text: ^3.0.0
+  audioplayers: ^5.2.1
 
 dev_dependencies:
   flutter_test:
@@ -66,7 +67,9 @@ flutter:
     - assets/images/family_members/
     - assets/images/colors/
     - assets/images/
-
+    - assets/sounds/colors/
+    - assets/sounds/family_members/
+    - assets/sounds/numbers/
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
 

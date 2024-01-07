@@ -1,16 +1,22 @@
 import 'package:flutter/material.dart';
+import 'package:audioplayers/audioplayers.dart';
 
 class Details extends StatelessWidget {
   String passimage;
   String nameEnglish;
   String nameArbic;
-  Details(
-      {super.key,
-      required this.passimage,
-      required this.nameEnglish,
-      required this.nameArbic});
+  String sounds;
+  Details({
+    super.key,
+    required this.passimage,
+    required this.nameEnglish,
+    required this.nameArbic,
+    required this.sounds,
+  });
   @override
   Widget build(BuildContext context) {
+    final player = AudioPlayer();
+
     Size size = MediaQuery.of(context).size;
     return Scaffold(
       backgroundColor: Colors.pink[100],
@@ -68,6 +74,15 @@ class Details extends StatelessWidget {
                   ),
                 ],
               ),
+              IconButton(
+                  onPressed: () {
+                    player.play(AssetSource(sounds));
+                  },
+                  icon: const Icon(
+                    Icons.play_circle,
+                    size: 100,
+                    color: Colors.white,
+                  )),
             ],
           ),
         ),
