@@ -29,7 +29,7 @@ class NumberRow extends StatelessWidget {
           ),
           Container(
             alignment: Alignment.bottomCenter,
-            margin: EdgeInsets.symmetric(horizontal: 8),
+            margin: const EdgeInsets.symmetric(horizontal: 8),
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(100),
                 color: Colors.purple[200],
@@ -39,7 +39,7 @@ class NumberRow extends StatelessWidget {
             child: Text(
               nameEnglish,
               textAlign: TextAlign.center,
-              style: TextStyle(color: Colors.white, fontSize: 19),
+              style: const TextStyle(color: Colors.white, fontSize: 19),
             ),
           ),
         ],

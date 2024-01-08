@@ -3,11 +3,12 @@ import 'package:flutter/material.dart';
 import 'package:tuko/models/numbers/data_number.dart';
 import 'package:tuko/models/numbers/image_number.dart';
 import 'package:tuko/models/numbers/sound_number.dart';
-import 'package:tuko/screen/details/details.dart';
+
+import 'package:tuko/screen/details/Details.dart';
 import 'package:tuko/screen/numbers/widget/numberrow.dart';
 
 class NumbersScreen extends StatelessWidget {
-  const NumbersScreen({super.key});
+  // ignore: recursive_getters
 
   @override
   Widget build(BuildContext context) {
@@ -151,9 +152,8 @@ class NumbersScreen extends StatelessWidget {
                           nameEnglish: DataNumber.ten,
                           nameArbic: 'عشرة',
                         )));
-          }),
+          })
     ];
-
     return Scaffold(
       backgroundColor: Colors.pink[100],
       appBar: AppBar(

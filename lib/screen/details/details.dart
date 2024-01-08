@@ -16,7 +16,6 @@ class Details extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final player = AudioPlayer();
-
     Size size = MediaQuery.of(context).size;
     return Scaffold(
       backgroundColor: Colors.pink[100],
@@ -82,7 +81,7 @@ class Details extends StatelessWidget {
                     Icons.play_circle,
                     size: 100,
                     color: Colors.white,
-                  )),
+                  ),),         
             ],
           ),
         ),
