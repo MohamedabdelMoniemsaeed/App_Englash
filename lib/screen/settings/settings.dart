@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:tuko/main.dart';
 import 'package:tuko/theme/porvider.dart';
 import 'package:tuko/theme/theme.dart';
 
 class Settings extends StatefulWidget {
-  Settings({super.key});
+  const Settings({super.key});
 
   // Color? color = Colors.blue;
   @override
@@ -21,23 +20,24 @@ class _SettingsState extends State<Settings> {
     return Scaffold(
       backgroundColor: Theme.of(context).primaryColor,
       appBar: AppBar(
-        title: Text("Settings"),
+        title: const Text("Settings"),
       ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
-          Spacer(),
+          const Spacer(),
           Container(
             alignment: Alignment.center,
-            margin: EdgeInsets.only(bottom: 10),
+            margin: const EdgeInsets.only(bottom: 10),
             child: DropdownMenu(
-                label: Text('Theme Colors'),
+                label: const Text('Theme Colors'),
                 enableSearch: false,
                 onSelected: (value) {
                   if (value != null) providerMode.setmode(value); //Provider
                 },
-                textStyle: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                textStyle:
+                    const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                 width: 300,
                 hintText: "S",
                 dropdownMenuEntries: <DropdownMenuEntry<ThemeData>>[

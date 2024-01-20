@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:tuko/theme/theme.dart';
 
 // ignore: must_be_immutable
 class TapRow extends StatelessWidget {

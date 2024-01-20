@@ -27,7 +27,7 @@ class _FamilyScreenState extends State<FamilyScreen> {
                       sounds: SoundFamily.daughter,
                       passimage: ImageFamily.daughter,
                       nameEnglish: DataFamily.daughter,
-                      nameArbic: "بنت")));
+                      nameArbic: "ابنة")));
         },
       ),
       NumberRow(
