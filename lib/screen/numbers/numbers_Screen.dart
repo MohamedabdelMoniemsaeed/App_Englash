@@ -7,9 +7,13 @@ import 'package:tuko/models/numbers/sound_number.dart';
 import 'package:tuko/screen/details/Details.dart';
 import 'package:tuko/screen/numbers/widget/numberrow.dart';
 
-class NumbersScreen extends StatelessWidget {
-  // ignore: recursive_getters
+class NumbersScreen extends StatefulWidget {
+  @override
+  State<NumbersScreen> createState() => _NumbersScreenState();
+}
 
+class _NumbersScreenState extends State<NumbersScreen> {
+  // ignore: recursive_getters
   @override
   Widget build(BuildContext context) {
     final List<NumberRow> item = [
@@ -155,11 +159,11 @@ class NumbersScreen extends StatelessWidget {
           })
     ];
     return Scaffold(
-      backgroundColor: Colors.pink[100],
+      backgroundColor: Theme.of(context).primaryColor,
       appBar: AppBar(
         centerTitle: true,
         // backgroundColor: Colors.pink[400],
-        backgroundColor: Colors.pink[400],
+        backgroundColor: Theme.of(context).dividerColor,
         title: const Text('Numbers',
             style: TextStyle(
                 fontSize: 30,

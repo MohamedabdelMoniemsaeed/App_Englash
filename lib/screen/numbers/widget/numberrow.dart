@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class NumberRow extends StatelessWidget {
+class NumberRow extends StatefulWidget {
   String images;
   String nameEnglish;
   // String nameArbic;
@@ -13,9 +13,14 @@ class NumberRow extends StatelessWidget {
       required this.onTap});
 
   @override
+  State<NumberRow> createState() => _NumberRowState();
+}
+
+class _NumberRowState extends State<NumberRow> {
+  @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: onTap,
+      onTap: widget.onTap,
       child: Stack(
         alignment: Alignment.bottomCenter,
         children: [
@@ -24,7 +29,7 @@ class NumberRow extends StatelessWidget {
             width: MediaQuery.of(context).size.width,
             height: MediaQuery.of(context).size.height,
             child: CircleAvatar(
-              backgroundImage: AssetImage(images),
+              backgroundImage: AssetImage(widget.images),
             ),
           ),
           Container(
@@ -32,12 +37,12 @@ class NumberRow extends StatelessWidget {
             margin: const EdgeInsets.symmetric(horizontal: 8),
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(100),
-                color: Colors.purple[200],
+                color: Theme.of(context).hoverColor,
                 border: Border.all(width: 3, color: Colors.white)),
             width: MediaQuery.of(context).size.width,
             height: MediaQuery.of(context).size.height * .04,
             child: Text(
-              nameEnglish,
+              widget.nameEnglish,
               textAlign: TextAlign.center,
               style: const TextStyle(color: Colors.white, fontSize: 19),
             ),

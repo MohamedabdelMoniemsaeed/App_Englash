@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tuko/theme/theme.dart';
 
 // ignore: must_be_immutable
 class TapRow extends StatelessWidget {
@@ -24,7 +25,7 @@ class TapRow extends StatelessWidget {
               begin: Alignment.bottomCenter,
               stops: const [0, 1],
               tileMode: TileMode.clamp,
-              colors: [Colors.pink, color]),
+              colors: [Theme.of(context).dividerColor, color]),
           borderRadius: BorderRadius.circular(50),
           color: color,
         ),

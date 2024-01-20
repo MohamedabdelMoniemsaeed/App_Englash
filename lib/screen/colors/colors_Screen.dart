@@ -5,9 +5,14 @@ import 'package:tuko/models/colors/sound_colors.dart';
 import 'package:tuko/screen/details/details.dart';
 import 'package:tuko/screen/numbers/widget/numberrow.dart';
 
-class ColorsScreen extends StatelessWidget {
+class ColorsScreen extends StatefulWidget {
   const ColorsScreen({super.key});
 
+  @override
+  State<ColorsScreen> createState() => _ColorsScreenState();
+}
+
+class _ColorsScreenState extends State<ColorsScreen> {
   @override
   Widget build(BuildContext context) {
     final List<NumberRow> item = [
@@ -126,14 +131,11 @@ class ColorsScreen extends StatelessWidget {
     ];
 
     return Scaffold(
-      backgroundColor: Colors.pink[100],
+      backgroundColor: Theme.of(context).primaryColor,
       appBar: AppBar(
-        centerTitle: true,
-        backgroundColor: Colors.pink[400],
         title: const Text(
           'Colors',
-          style: TextStyle(
-              fontSize: 30, color: Colors.white, fontWeight: FontWeight.bold),
+          style: TextStyle(),
         ),
       ),
       body: GridView.builder(

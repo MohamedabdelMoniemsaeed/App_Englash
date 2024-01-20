@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:audioplayers/audioplayers.dart';
 
-class Details extends StatelessWidget {
+class Details extends StatefulWidget {
   String passimage;
   String nameEnglish;
   String nameArbic;
@@ -13,12 +13,18 @@ class Details extends StatelessWidget {
     required this.nameArbic,
     required this.sounds,
   });
+
+  @override
+  State<Details> createState() => _DetailsState();
+}
+
+class _DetailsState extends State<Details> {
   @override
   Widget build(BuildContext context) {
     final player = AudioPlayer();
     Size size = MediaQuery.of(context).size;
     return Scaffold(
-      backgroundColor: Colors.pink[100],
+      backgroundColor: Theme.of(context).primaryColor,
       body: SafeArea(
         child: Container(
           margin: const EdgeInsets.all(8),
@@ -30,10 +36,11 @@ class Details extends StatelessWidget {
                 width: size.width,
                 height: size.height * .5,
                 decoration: BoxDecoration(
-                  border: Border.all(color: Colors.pink, width: 5),
+                  border:
+                      Border.all(color: Theme.of(context).hoverColor, width: 5),
                   borderRadius: BorderRadiusDirectional.circular(50),
                   image: DecorationImage(
-                      image: AssetImage(passimage), fit: BoxFit.cover),
+                      image: AssetImage(widget.passimage), fit: BoxFit.cover),
                 ),
               ),
               Row(
@@ -48,7 +55,7 @@ class Details extends StatelessWidget {
                     ),
                     child: Text(
                       textAlign: TextAlign.center,
-                      nameEnglish,
+                      widget.nameEnglish,
                       style: const TextStyle(
                           color: Colors.white,
                           fontSize: 35,
@@ -64,7 +71,7 @@ class Details extends StatelessWidget {
                       textAlign: TextAlign.end,
                       // minFontSize: 16,
                       // maxLines: 2,
-                      nameArbic,
+                      widget.nameArbic,
                       style: const TextStyle(
                           color: Colors.white,
                           fontSize: 30,
@@ -74,14 +81,15 @@ class Details extends StatelessWidget {
                 ],
               ),
               IconButton(
-                  onPressed: () {
-                    player.play(AssetSource(sounds));
-                  },
-                  icon: const Icon(
-                    Icons.play_circle,
-                    size: 100,
-                    color: Colors.white,
-                  ),),         
+                onPressed: () {
+                  player.play(AssetSource(widget.sounds));
+                },
+                icon: const Icon(
+                  Icons.play_circle,
+                  size: 100,
+                  color: Colors.white,
+                ),
+              ),
             ],
           ),
         ),

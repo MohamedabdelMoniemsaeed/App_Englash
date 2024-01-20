@@ -5,9 +5,14 @@ import 'package:tuko/models/family/sound_family.dart';
 import 'package:tuko/screen/details/details.dart';
 import 'package:tuko/screen/numbers/widget/numberrow.dart';
 
-class FamilyScreen extends StatelessWidget {
+class FamilyScreen extends StatefulWidget {
   const FamilyScreen({super.key});
 
+  @override
+  State<FamilyScreen> createState() => _FamilyScreenState();
+}
+
+class _FamilyScreenState extends State<FamilyScreen> {
   @override
   Widget build(BuildContext context) {
     final List<NumberRow> item = [
@@ -126,10 +131,8 @@ class FamilyScreen extends StatelessWidget {
     ];
 
     return Scaffold(
-      backgroundColor: Colors.pink[100],
+      backgroundColor: Theme.of(context).primaryColor,
       appBar: AppBar(
-        centerTitle: true,
-        backgroundColor: Colors.pink[400],
         title: const Text(
           'Family',
           style: TextStyle(
