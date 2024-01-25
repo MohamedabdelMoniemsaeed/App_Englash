@@ -3,6 +3,7 @@ import 'package:audioplayers/audioplayers.dart';
 
 // ignore: must_be_immutable
 class Details extends StatefulWidget {
+  
   String passimage;
   String nameEnglish;
   String nameArbic;
