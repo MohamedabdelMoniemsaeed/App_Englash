@@ -2,12 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:audioplayers/audioplayers.dart';
 
 // ignore: must_be_immutable
-<<<<<<< HEAD:lib/screen/widgets_details/details.dart
 class Details extends StatelessWidget {
-=======
-class Details extends StatefulWidget {
-  
->>>>>>> 0d4b1f286e8f18ad72bf43d861d66e97f0199952:lib/screen/details/details.dart
   String passimage;
   String nameEnglish;
   String nameArbic;
