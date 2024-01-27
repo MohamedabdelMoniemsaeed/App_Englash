@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:audioplayers/audioplayers.dart';
 
 // ignore: must_be_immutable
-class Details extends StatefulWidget {
+class Details extends StatelessWidget {
   String passimage;
   String nameEnglish;
   String nameArbic;
@@ -16,13 +16,7 @@ class Details extends StatefulWidget {
   });
 
   @override
-  State<Details> createState() => _DetailsState();
-}
-
-class _DetailsState extends State<Details> {
-  @override
   Widget build(BuildContext context) {
-    final player = AudioPlayer();
     Size size = MediaQuery.of(context).size;
     return Scaffold(
       backgroundColor: Theme.of(context).primaryColor,
@@ -41,7 +35,7 @@ class _DetailsState extends State<Details> {
                       Border.all(color: Theme.of(context).hoverColor, width: 5),
                   borderRadius: BorderRadiusDirectional.circular(50),
                   image: DecorationImage(
-                      image: AssetImage(widget.passimage), fit: BoxFit.cover),
+                      image: AssetImage(passimage), fit: BoxFit.cover),
                 ),
               ),
               Row(
@@ -56,7 +50,7 @@ class _DetailsState extends State<Details> {
                     ),
                     child: Text(
                       textAlign: TextAlign.center,
-                      widget.nameEnglish,
+                      nameEnglish,
                       style: const TextStyle(
                           color: Colors.white,
                           fontSize: 35,
@@ -72,7 +66,7 @@ class _DetailsState extends State<Details> {
                       textAlign: TextAlign.end,
                       // minFontSize: 16,
                       // maxLines: 2,
-                      widget.nameArbic,
+                      nameArbic,
                       style: const TextStyle(
                           color: Colors.white,
                           fontSize: 30,
@@ -83,7 +77,8 @@ class _DetailsState extends State<Details> {
               ),
               IconButton(
                 onPressed: () {
-                  player.play(AssetSource(widget.sounds));
+                  final player = AudioPlayer();
+                  player.play(AssetSource(sounds));
                 },
                 icon: const Icon(
                   Icons.play_circle,

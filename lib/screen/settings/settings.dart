@@ -4,8 +4,7 @@ import 'package:tuko/theme/porvider.dart';
 import 'package:tuko/theme/theme.dart';
 
 class Settings extends StatefulWidget {
-  const Settings({super.key});
-
+  Settings({super.key});
   // Color? color = Colors.blue;
   @override
   State<Settings> createState() => _SettingsState();
@@ -13,6 +12,7 @@ class Settings extends StatefulWidget {
 
 class _SettingsState extends State<Settings> {
   late Mode providerMode; //Provider
+  String name = 'Theme Colors';
 
   @override
   Widget build(BuildContext context) {
@@ -31,15 +31,15 @@ class _SettingsState extends State<Settings> {
             alignment: Alignment.center,
             margin: const EdgeInsets.only(bottom: 10),
             child: DropdownMenu(
-                label: const Text('Theme Colors'),
-                enableSearch: false,
+                label: Text(name),
+                enableSearch: true,
                 onSelected: (value) {
                   if (value != null) providerMode.setmode(value); //Provider
                 },
                 textStyle:
                     const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                 width: 300,
-                hintText: "S",
+                // hintText: "S",
                 dropdownMenuEntries: <DropdownMenuEntry<ThemeData>>[
                   DropdownMenuEntry(value: ThemeApp.boyTheme, label: "Blue"),
                   DropdownMenuEntry(value: ThemeApp.girlTheme, label: "Pink"),

@@ -1,8 +1,8 @@
+
 import 'package:flutter/material.dart';
 import 'package:tuko/models/family/data_family.dart';
 import 'package:tuko/models/family/image_family.dart';
 import 'package:tuko/models/family/sound_family.dart';
-import 'package:tuko/screen/details/details.dart';
 import 'package:tuko/screen/numbers/widget/numberrow.dart';
 
 class FamilyScreen extends StatefulWidget {
@@ -19,114 +19,50 @@ class _FamilyScreenState extends State<FamilyScreen> {
       NumberRow(
         nameEnglish: DataFamily.daughter,
         images: ImageFamily.daughter,
-        onTap: () {
-          Navigator.push(
-              context,
-              MaterialPageRoute(
-                  builder: (_) => Details(
-                      sounds: SoundFamily.daughter,
-                      passimage: ImageFamily.daughter,
-                      nameEnglish: DataFamily.daughter,
-                      nameArbic: "ابنة")));
-        },
+        nameArbic: DataFamily.daughterArbic,
+        sound: SoundFamily.daughter,
       ),
       NumberRow(
         nameEnglish: DataFamily.father,
         images: ImageFamily.father,
-        onTap: () {
-          Navigator.push(
-              context,
-              MaterialPageRoute(
-                  builder: (_) => Details(
-                      sounds: SoundFamily.father,
-                      passimage: ImageFamily.father,
-                      nameEnglish: DataFamily.father,
-                      nameArbic: "أب")));
-        },
+        nameArbic: DataFamily.fatherArbic,
+        sound: SoundFamily.father,
       ),
       NumberRow(
         nameEnglish: DataFamily.mother,
         images: ImageFamily.mother,
-        onTap: () {
-          Navigator.push(
-              context,
-              MaterialPageRoute(
-                  builder: (_) => Details(
-                      sounds: SoundFamily.mother,
-                      passimage: ImageFamily.mother,
-                      nameEnglish: DataFamily.mother,
-                      nameArbic: "الأم")));
-        },
+        nameArbic: DataFamily.motherArbic,
+        sound: SoundFamily.mother,
       ),
       NumberRow(
         nameEnglish: DataFamily.son,
         images: ImageFamily.son,
-        onTap: () {
-          Navigator.push(
-              context,
-              MaterialPageRoute(
-                  builder: (_) => Details(
-                      sounds: SoundFamily.son,
-                      passimage: ImageFamily.son,
-                      nameEnglish: DataFamily.son,
-                      nameArbic: "ابن")));
-        },
+        nameArbic: DataFamily.sonArbic,
+        sound: SoundFamily.son,
       ),
       NumberRow(
         nameEnglish: DataFamily.grandfather,
         images: ImageFamily.grandfather,
-        onTap: () {
-          Navigator.push(
-              context,
-              MaterialPageRoute(
-                  builder: (_) => Details(
-                      sounds: SoundFamily.grandfather,
-                      passimage: ImageFamily.grandfather,
-                      nameEnglish: DataFamily.grandfather,
-                      nameArbic: "جد")));
-        },
+        nameArbic: DataFamily.grandfatherArbic,
+        sound: SoundFamily.grandfather,
       ),
       NumberRow(
         nameEnglish: DataFamily.grandmother,
         images: ImageFamily.grandmother,
-        onTap: () {
-          Navigator.push(
-              context,
-              MaterialPageRoute(
-                  builder: (_) => Details(
-                      sounds: SoundFamily.grandmother,
-                      passimage: ImageFamily.grandmother,
-                      nameEnglish: DataFamily.grandmother,
-                      nameArbic: "جدة")));
-        },
+        nameArbic: DataFamily.grandmotherArbic,
+        sound: SoundFamily.grandmother,
       ),
       NumberRow(
         nameEnglish: DataFamily.olderbrother,
         images: ImageFamily.olderbrother,
-        onTap: () {
-          Navigator.push(
-              context,
-              MaterialPageRoute(
-                  builder: (_) => Details(
-                      sounds: SoundFamily.olderbrother,
-                      passimage: ImageFamily.olderbrother,
-                      nameEnglish: DataFamily.olderbrother,
-                      nameArbic: "الأخ \n الأكبر")));
-        },
+        nameArbic: DataFamily.olderbrotherArbic,
+        sound: SoundFamily.olderbrother,
       ),
       NumberRow(
         nameEnglish: DataFamily.oldersister,
         images: ImageFamily.oldersister,
-        onTap: () {
-          Navigator.push(
-              context,
-              MaterialPageRoute(
-                  builder: (_) => Details(
-                      sounds: SoundFamily.oldersister,
-                      passimage: ImageFamily.oldersister,
-                      nameEnglish: DataFamily.oldersister,
-                      nameArbic: "الأخت\nالكبرى")));
-        },
+        nameArbic: DataFamily.oldersisterArbic,
+        sound: SoundFamily.oldersister,
       ),
     ];
 

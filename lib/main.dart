@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
       theme: providerMode.mode,
       darkTheme: ThemeApp.girlTheme,
       debugShowCheckedModeBanner: false,
-      home: HomeScreen(),
+      home: const HomeScreen(),
     );
   }
 }

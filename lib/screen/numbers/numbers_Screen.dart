@@ -3,160 +3,75 @@ import 'package:flutter/material.dart';
 import 'package:tuko/models/numbers/data_number.dart';
 import 'package:tuko/models/numbers/image_number.dart';
 import 'package:tuko/models/numbers/sound_number.dart';
-
-import 'package:tuko/screen/details/Details.dart';
 import 'package:tuko/screen/numbers/widget/numberrow.dart';
 
-class NumbersScreen extends StatefulWidget {
-  @override
-  State<NumbersScreen> createState() => _NumbersScreenState();
-}
+class NumbersScreen extends StatelessWidget {
+  const NumbersScreen({super.key});
 
-class _NumbersScreenState extends State<NumbersScreen> {
   // ignore: recursive_getters
   @override
   Widget build(BuildContext context) {
     final List<NumberRow> item = [
       NumberRow(
-          nameEnglish: DataNumber.one,
-          images: ImageNumber.one,
-          onTap: () {
-            Navigator.push(
-                context,
-                MaterialPageRoute(
-                    builder: (context) => Details(
-                          sounds: SoundNumber.one,
-                          passimage: ImageNumber.one,
-                          nameEnglish: DataNumber.one,
-                          nameArbic: 'واحد',
-                        )));
-          }),
+        nameEnglish: DataNumber.one,
+        images: ImageNumber.one,
+        nameArbic: DataNumber.oneArbic,
+        sound: SoundNumber.one,
+      ),
       NumberRow(
-          nameEnglish: DataNumber.two,
-          images: ImageNumber.two,
-          onTap: () {
-            Navigator.push(
-                context,
-                MaterialPageRoute(
-                    builder: (context) => Details(
-                          sounds: SoundNumber.two,
-                          passimage: ImageNumber.two,
-                          nameEnglish: DataNumber.two,
-                          nameArbic: 'اثنين',
-                        )));
-          }),
+        nameEnglish: DataNumber.two,
+        images: ImageNumber.two,
+        nameArbic: DataNumber.twoArbic,
+        sound: SoundNumber.two,
+      ),
       NumberRow(
-          nameEnglish: DataNumber.three,
-          images: ImageNumber.three,
-          onTap: () {
-            Navigator.push(
-                context,
-                MaterialPageRoute(
-                    builder: (context) => Details(
-                          sounds: SoundNumber.three,
-                          passimage: ImageNumber.three,
-                          nameEnglish: DataNumber.three,
-                          nameArbic: 'ثلاثة',
-                        )));
-          }),
+        nameEnglish: DataNumber.three,
+        images: ImageNumber.three,
+        nameArbic: DataNumber.threeArbic,
+        sound: SoundNumber.three,
+      ),
       NumberRow(
-          nameEnglish: DataNumber.four,
-          images: ImageNumber.four,
-          onTap: () {
-            Navigator.push(
-                context,
-                MaterialPageRoute(
-                    builder: (context) => Details(
-                          sounds: SoundNumber.four,
-                          passimage: ImageNumber.four,
-                          nameEnglish: DataNumber.four,
-                          nameArbic: 'أربعة',
-                        )));
-          }),
+        nameEnglish: DataNumber.four,
+        images: ImageNumber.four,
+        nameArbic: DataNumber.fourArbic,
+        sound: SoundNumber.four,
+      ),
       NumberRow(
-          nameEnglish: DataNumber.five,
-          images: ImageNumber.five,
-          onTap: () {
-            Navigator.push(
-                context,
-                MaterialPageRoute(
-                    builder: (context) => Details(
-                          sounds: SoundNumber.five,
-                          passimage: ImageNumber.five,
-                          nameEnglish: DataNumber.five,
-                          nameArbic: 'خمسة',
-                        )));
-          }),
+        nameEnglish: DataNumber.five,
+        images: ImageNumber.five,
+        nameArbic: DataNumber.fiveArbic,
+        sound: SoundNumber.five,
+      ),
       NumberRow(
-          nameEnglish: DataNumber.six,
-          images: ImageNumber.six,
-          onTap: () {
-            Navigator.push(
-                context,
-                MaterialPageRoute(
-                    builder: (context) => Details(
-                          sounds: SoundNumber.six,
-                          passimage: ImageNumber.six,
-                          nameEnglish: DataNumber.six,
-                          nameArbic: 'ستة',
-                        )));
-          }),
+        nameEnglish: DataNumber.six,
+        images: ImageNumber.six,
+        nameArbic: DataNumber.sixArbic,
+        sound: SoundNumber.six,
+      ),
       NumberRow(
-          nameEnglish: DataNumber.seven,
-          images: ImageNumber.seven,
-          onTap: () {
-            Navigator.push(
-                context,
-                MaterialPageRoute(
-                    builder: (context) => Details(
-                          sounds: SoundNumber.seven,
-                          passimage: ImageNumber.seven,
-                          nameEnglish: DataNumber.seven,
-                          nameArbic: 'سبعة',
-                        )));
-          }),
+        nameEnglish: DataNumber.seven,
+        images: ImageNumber.seven,
+        nameArbic: DataNumber.sevenArbic,
+        sound: SoundNumber.seven,
+      ),
       NumberRow(
-          nameEnglish: DataNumber.eight,
-          images: ImageNumber.eight,
-          onTap: () {
-            Navigator.push(
-                context,
-                MaterialPageRoute(
-                    builder: (context) => Details(
-                          sounds: SoundNumber.eight,
-                          passimage: ImageNumber.eight,
-                          nameEnglish: DataNumber.eight,
-                          nameArbic: 'ثمانية',
-                        )));
-          }),
+        nameEnglish: DataNumber.eight,
+        images: ImageNumber.eight,
+        nameArbic: DataNumber.eightArbic,
+        sound: SoundNumber.eight,
+      ),
       NumberRow(
-          nameEnglish: DataNumber.nine,
-          images: ImageNumber.nine,
-          onTap: () {
-            Navigator.push(
-                context,
-                MaterialPageRoute(
-                    builder: (context) => Details(
-                          sounds: SoundNumber.nine,
-                          passimage: ImageNumber.nine,
-                          nameEnglish: DataNumber.nine,
-                          nameArbic: 'تسع',
-                        )));
-          }),
+        nameEnglish: DataNumber.nine,
+        images: ImageNumber.nine,
+        nameArbic: DataNumber.nineArbic,
+        sound: SoundNumber.nine,
+      ),
       NumberRow(
-          nameEnglish: DataNumber.ten,
-          images: ImageNumber.ten,
-          onTap: () {
-            Navigator.push(
-                context,
-                MaterialPageRoute(
-                    builder: (context) => Details(
-                          sounds: SoundNumber.ten,
-                          passimage: ImageNumber.ten,
-                          nameEnglish: DataNumber.ten,
-                          nameArbic: 'عشرة',
-                        )));
-          })
+        nameEnglish: DataNumber.ten,
+        images: ImageNumber.ten,
+        nameArbic: DataNumber.tenArbic,
+        sound: SoundNumber.ten,
+      )
     ];
     return Scaffold(
       backgroundColor: Theme.of(context).primaryColor,

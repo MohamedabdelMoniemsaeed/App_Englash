@@ -1,17 +1,21 @@
-import 'package:flutter/material.dart';
-
 // ignore: must_be_immutable
+import 'package:flutter/material.dart';
+import 'package:tuko/screen/widgets_details/Details.dart';
+
 class NumberRow extends StatefulWidget {
-  String images;
-  String nameEnglish;
-  // String nameArbic;
-  Function() onTap;
-  NumberRow(
-      {super.key,
-      required this.images,
-      required this.nameEnglish,
-      // required this.nameArbic,
-      required this.onTap});
+  final String images;
+  final String nameEnglish;
+  final String sound;
+  final String nameArbic;
+  // Function() onTap;
+  NumberRow({
+    super.key,
+    required this.images,
+    required this.nameEnglish,
+    required this.nameArbic,
+    required this.sound,
+    // required this.onTap
+  });
 
   @override
   State<NumberRow> createState() => _NumberRowState();
@@ -21,7 +25,17 @@ class _NumberRowState extends State<NumberRow> {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: widget.onTap,
+      onTap: () {
+        Navigator.push(
+            context,
+            MaterialPageRoute(
+                builder: (context) => Details(
+                      sounds: widget.sound,
+                      passimage: widget.images,
+                      nameEnglish: widget.nameEnglish,
+                      nameArbic: widget.nameArbic,
+                    )));
+      },
       child: Stack(
         alignment: Alignment.bottomCenter,
         children: [
