@@ -1,7 +1,7 @@
-// ignore: must_be_immutable
 import 'package:flutter/material.dart';
 import 'package:tuko/screen/widgets_details/Details.dart';
 
+// ignore: must_be_immutable
 class NumberRow extends StatefulWidget {
   final String images;
   final String nameEnglish;
@@ -27,14 +27,16 @@ class _NumberRowState extends State<NumberRow> {
     return GestureDetector(
       onTap: () {
         Navigator.push(
-            context,
-            MaterialPageRoute(
-                builder: (context) => Details(
-                      sounds: widget.sound,
-                      passimage: widget.images,
-                      nameEnglish: widget.nameEnglish,
-                      nameArbic: widget.nameArbic,
-                    )));
+          context,
+          MaterialPageRoute(
+            builder: (context) => Details(
+              sounds: widget.sound,
+              passimage: widget.images,
+              nameEnglish: widget.nameEnglish,
+              nameArbic: widget.nameArbic,
+            ),
+          ),
+        );
       },
       child: Stack(
         alignment: Alignment.bottomCenter,
