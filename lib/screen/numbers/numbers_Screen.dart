@@ -1,76 +1,85 @@
 // ignore: file_names
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:tuko/models/numbers/data_number.dart';
 import 'package:tuko/models/numbers/image_number.dart';
 import 'package:tuko/models/numbers/sound_number.dart';
-import 'package:tuko/screen/numbers/widget/numberrow.dart';
+import 'package:tuko/screen/widgets_details/number_Details.dart';
 
-class NumbersScreen extends StatelessWidget {
+class NumbersScreen extends StatefulWidget {
   const NumbersScreen({super.key});
 
+  @override
+  State<NumbersScreen> createState() => _NumbersScreenState();
+}
+
+class _NumbersScreenState extends State<NumbersScreen> {
   // ignore: recursive_getters
   @override
   Widget build(BuildContext context) {
-    final List<NumberRow> item = [
-      NumberRow(
+    Size size = MediaQuery.of(context).size;
+
+    int indexs = 0;
+    final List<NumberDetails> item = [
+      NumberDetails(
         nameEnglish: DataNumber.one,
-        images: ImageNumber.one,
+        passimage: ImageNumber.one,
         nameArbic: DataNumber.oneArbic,
-        sound: SoundNumber.one,
+        sounds: SoundNumber.one,
       ),
-      NumberRow(
+      NumberDetails(
         nameEnglish: DataNumber.two,
-        images: ImageNumber.two,
+        passimage: ImageNumber.two,
         nameArbic: DataNumber.twoArbic,
-        sound: SoundNumber.two,
+        sounds: SoundNumber.two,
       ),
-      NumberRow(
+      NumberDetails(
         nameEnglish: DataNumber.three,
-        images: ImageNumber.three,
+        passimage: ImageNumber.three,
         nameArbic: DataNumber.threeArbic,
-        sound: SoundNumber.three,
+        sounds: SoundNumber.three,
       ),
-      NumberRow(
+      NumberDetails(
         nameEnglish: DataNumber.four,
-        images: ImageNumber.four,
+        passimage: ImageNumber.four,
         nameArbic: DataNumber.fourArbic,
-        sound: SoundNumber.four,
+        sounds: SoundNumber.four,
       ),
-      NumberRow(
+      NumberDetails(
         nameEnglish: DataNumber.five,
-        images: ImageNumber.five,
+        passimage: ImageNumber.five,
         nameArbic: DataNumber.fiveArbic,
-        sound: SoundNumber.five,
+        sounds: SoundNumber.five,
       ),
-      NumberRow(
+      NumberDetails(
         nameEnglish: DataNumber.six,
-        images: ImageNumber.six,
+        passimage: ImageNumber.six,
         nameArbic: DataNumber.sixArbic,
-        sound: SoundNumber.six,
+        sounds: SoundNumber.six,
       ),
-      NumberRow(
+      NumberDetails(
         nameEnglish: DataNumber.seven,
-        images: ImageNumber.seven,
+        passimage: ImageNumber.seven,
         nameArbic: DataNumber.sevenArbic,
-        sound: SoundNumber.seven,
+        sounds: SoundNumber.seven,
       ),
-      NumberRow(
+      NumberDetails(
         nameEnglish: DataNumber.eight,
-        images: ImageNumber.eight,
+        passimage: ImageNumber.eight,
         nameArbic: DataNumber.eightArbic,
-        sound: SoundNumber.eight,
+        sounds: SoundNumber.eight,
       ),
-      NumberRow(
+      NumberDetails(
         nameEnglish: DataNumber.nine,
-        images: ImageNumber.nine,
+        passimage: ImageNumber.nine,
         nameArbic: DataNumber.nineArbic,
-        sound: SoundNumber.nine,
+        sounds: SoundNumber.nine,
       ),
-      NumberRow(
+      NumberDetails(
         nameEnglish: DataNumber.ten,
-        images: ImageNumber.ten,
+        passimage: ImageNumber.ten,
         nameArbic: DataNumber.tenArbic,
-        sound: SoundNumber.ten,
+        sounds: SoundNumber.ten,
       )
     ];
     return Scaffold(
@@ -85,12 +94,23 @@ class NumbersScreen extends StatelessWidget {
                 color: Colors.white,
                 fontWeight: FontWeight.bold)),
       ),
-      body: GridView.builder(
-        itemCount: item.length,
-        itemBuilder: (context, index) => item[index],
-        gridDelegate:
-            const SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 3),
-        // children: getlist(item),
+      body: CarouselSlider(
+        options: CarouselOptions(
+          viewportFraction: 1,
+          enlargeCenterPage: true,
+          // enlargeFactor: 0.3,
+          onPageChanged: (index, reason) => setState(() => indexs = index),
+          scrollDirection: Axis.horizontal,
+          height: size.height,
+        ),
+        items: item
+            .map((e) => NumberDetails(
+                  nameArbic: e.nameArbic,
+                  nameEnglish: e.nameEnglish,
+                  passimage: e.passimage,
+                  sounds: e.sounds,
+                ))
+            .toList(),
       ),
     );
   }

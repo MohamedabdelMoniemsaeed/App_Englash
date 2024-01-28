@@ -17,4 +17,6 @@ abstract class ImageFamily {
       'assets/images/family_members/family_younger_brother.png';
   static String youngersister =
       'assets/images/family_members/family_younger_sister.png';
+  static String brother = 'assets/images/family_members/brother.jpg';
+  static String sister = 'assets/images/family_members/sister.jpg';
 }

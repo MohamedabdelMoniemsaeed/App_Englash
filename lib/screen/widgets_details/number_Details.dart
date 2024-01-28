@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:audioplayers/audioplayers.dart';
 
 // ignore: must_be_immutable
-class Details extends StatelessWidget {
+class NumberDetails extends StatelessWidget {
   String passimage;
   String nameEnglish;
   String nameArbic;
   String sounds;
-  Details({
+  NumberDetails({
     super.key,
     required this.passimage,
     required this.nameEnglish,
@@ -21,27 +21,29 @@ class Details extends StatelessWidget {
     return Scaffold(
       backgroundColor: Theme.of(context).primaryColor,
       body: SafeArea(
-        child: Container(
-          margin: const EdgeInsets.all(8),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Container(
-                margin: const EdgeInsets.all(8),
-                width: size.width,
-                height: size.height * .5,
-                decoration: BoxDecoration(
-                  border:
-                      Border.all(color: Theme.of(context).hoverColor, width: 5),
-                  borderRadius: BorderRadiusDirectional.circular(50),
-                  image: DecorationImage(
-                      image: AssetImage(passimage), fit: BoxFit.cover),
-                ),
-              ),
-              Row(
-                mainAxisSize: MainAxisSize.max,
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        child: GestureDetector(
+          onTap: () {
+            final player = AudioPlayer();
+            player.play(AssetSource(sounds));
+          },
+          child: Container(
+            margin: const EdgeInsets.all(8),
+            child: Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
+                  Container(
+                    margin: const EdgeInsets.all(8),
+                    width: size.width,
+                    height: size.height * .5,
+                    decoration: BoxDecoration(
+                      border: Border.all(
+                          color: Theme.of(context).hoverColor, width: 5),
+                      borderRadius: BorderRadiusDirectional.circular(50),
+                      image: DecorationImage(
+                          image: AssetImage(passimage), fit: BoxFit.cover),
+                    ),
+                  ),
                   Container(
                     // color: Colors.amber,
                     // width: size.width * .5,
@@ -49,8 +51,8 @@ class Details extends StatelessWidget {
                       horizontal: 20,
                     ),
                     child: Text(
-                      textAlign: TextAlign.center,
-                      nameEnglish,
+                      textAlign: TextAlign.right,
+                      nameArbic,
                       style: const TextStyle(
                           color: Colors.white,
                           fontSize: 35,
@@ -63,30 +65,19 @@ class Details extends StatelessWidget {
                     margin:
                         const EdgeInsets.symmetric(horizontal: 20, vertical: 5),
                     child: Text(
-                      textAlign: TextAlign.end,
+                      textAlign: TextAlign.center,
                       // minFontSize: 16,
                       // maxLines: 2,
-                      nameArbic,
+                      nameEnglish,
                       style: const TextStyle(
                           color: Colors.white,
-                          fontSize: 30,
+                          fontSize: 100,
                           fontWeight: FontWeight.bold),
                     ),
                   ),
                 ],
               ),
-              IconButton(
-                onPressed: () {
-                  final player = AudioPlayer();
-                  player.play(AssetSource(sounds));
-                },
-                icon: const Icon(
-                  Icons.play_circle,
-                  size: 100,
-                  color: Colors.white,
-                ),
-              ),
-            ],
+            ),
           ),
         ),
       ),

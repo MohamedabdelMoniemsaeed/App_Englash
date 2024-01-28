@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:tuko/screen/widgets_details/Details.dart';
+import 'package:tuko/screen/widgets_details/family_Details.dart';
 
 // ignore: must_be_immutable
-class NumberRow extends StatefulWidget {
+class FamilyIcon extends StatefulWidget {
   final String images;
   final String nameEnglish;
   final String sound;
   final String nameArbic;
   // Function() onTap;
-  NumberRow({
+  FamilyIcon({
     super.key,
     required this.images,
     required this.nameEnglish,
@@ -18,10 +19,10 @@ class NumberRow extends StatefulWidget {
   });
 
   @override
-  State<NumberRow> createState() => _NumberRowState();
+  State<FamilyIcon> createState() => _FamilyIconState();
 }
 
-class _NumberRowState extends State<NumberRow> {
+class _FamilyIconState extends State<FamilyIcon> {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -29,7 +30,7 @@ class _NumberRowState extends State<NumberRow> {
         Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (context) => Details(
+            builder: (context) => FamilyDetails(
               sounds: widget.sound,
               passimage: widget.images,
               nameEnglish: widget.nameEnglish,

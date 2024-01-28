@@ -7,6 +7,8 @@ abstract class DataFamily {
   static String grandmother = 'Grandmother';
   static String olderbrother = 'OlderBrother';
   static String oldersister = 'OlderSister';
+  static String brother = 'Brother';
+  static String sister = 'Sister';
 
   static String daughterArbic = 'ابنة';
   static String fatherArbic = 'أب';
@@ -16,4 +18,6 @@ abstract class DataFamily {
   static String grandmotherArbic = 'جدة';
   static String olderbrotherArbic = "الأخ الأكبر";
   static String oldersisterArbic = "الأخت الكبرى";
+  static String brotherArbic = 'اخ';
+  static String sisterArbic = 'اخت';
 }

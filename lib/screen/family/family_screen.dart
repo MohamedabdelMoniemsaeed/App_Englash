@@ -1,9 +1,8 @@
-
 import 'package:flutter/material.dart';
 import 'package:tuko/models/family/data_family.dart';
 import 'package:tuko/models/family/image_family.dart';
 import 'package:tuko/models/family/sound_family.dart';
-import 'package:tuko/screen/numbers/widget/numberrow.dart';
+import 'package:tuko/screen/widget/all_icon.dart';
 
 class FamilyScreen extends StatefulWidget {
   const FamilyScreen({super.key});
@@ -15,54 +14,54 @@ class FamilyScreen extends StatefulWidget {
 class _FamilyScreenState extends State<FamilyScreen> {
   @override
   Widget build(BuildContext context) {
-    final List<NumberRow> item = [
-      NumberRow(
+    final List<FamilyIcon> item = [
+      FamilyIcon(
         nameEnglish: DataFamily.daughter,
         images: ImageFamily.daughter,
         nameArbic: DataFamily.daughterArbic,
         sound: SoundFamily.daughter,
       ),
-      NumberRow(
+      FamilyIcon(
         nameEnglish: DataFamily.father,
         images: ImageFamily.father,
         nameArbic: DataFamily.fatherArbic,
         sound: SoundFamily.father,
       ),
-      NumberRow(
+      FamilyIcon(
         nameEnglish: DataFamily.mother,
         images: ImageFamily.mother,
         nameArbic: DataFamily.motherArbic,
         sound: SoundFamily.mother,
       ),
-      NumberRow(
+      FamilyIcon(
         nameEnglish: DataFamily.son,
         images: ImageFamily.son,
         nameArbic: DataFamily.sonArbic,
         sound: SoundFamily.son,
       ),
-      NumberRow(
+      FamilyIcon(
         nameEnglish: DataFamily.grandfather,
         images: ImageFamily.grandfather,
         nameArbic: DataFamily.grandfatherArbic,
         sound: SoundFamily.grandfather,
       ),
-      NumberRow(
+      FamilyIcon(
         nameEnglish: DataFamily.grandmother,
         images: ImageFamily.grandmother,
         nameArbic: DataFamily.grandmotherArbic,
         sound: SoundFamily.grandmother,
       ),
-      NumberRow(
-        nameEnglish: DataFamily.olderbrother,
-        images: ImageFamily.olderbrother,
-        nameArbic: DataFamily.olderbrotherArbic,
-        sound: SoundFamily.olderbrother,
+      FamilyIcon(
+        nameEnglish: DataFamily.brother,
+        images: ImageFamily.brother,
+        nameArbic: DataFamily.brotherArbic,
+        sound: SoundFamily.brother,
       ),
-      NumberRow(
-        nameEnglish: DataFamily.oldersister,
-        images: ImageFamily.oldersister,
-        nameArbic: DataFamily.oldersisterArbic,
-        sound: SoundFamily.oldersister,
+      FamilyIcon(
+        nameEnglish: DataFamily.sister,
+        images: ImageFamily.sister,
+        nameArbic: DataFamily.sisterArbic,
+        sound: SoundFamily.sister,
       ),
     ];
 

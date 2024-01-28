@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:tuko/models/abc/data_Abc.dart';
 import 'package:tuko/models/abc/image_Abc.dart';
 import 'package:tuko/models/abc/sound_Abc.dart';
-import 'package:tuko/screen/widgets_details/abcDetails.dart';
+import 'package:tuko/screen/widgets_details/abc_Details.dart';
 
 class AbcScreen extends StatefulWidget {
   const AbcScreen({super.key});

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:tuko/models/colors/data_colors.dart';
 import 'package:tuko/models/colors/sound_colors.dart';
-import 'package:tuko/screen/widgets_details/colorsDetails.dart';
+import 'package:tuko/screen/widgets_details/colors_Details.dart';
 
 class ColorsScreen extends StatefulWidget {
   const ColorsScreen({super.key});

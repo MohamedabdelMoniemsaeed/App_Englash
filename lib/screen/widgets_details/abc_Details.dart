@@ -1,8 +1,7 @@
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
-import 'package:tuko/models/abc/data_Abc.dart';
-import 'package:tuko/models/abc/image_Abc.dart';
 
+// ignore: must_be_immutable
 class AbcDetails extends StatelessWidget {
   String imageAbc;
   String nameEnglish;
