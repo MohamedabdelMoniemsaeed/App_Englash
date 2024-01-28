@@ -30,10 +30,10 @@ class _ColorsScreenState extends State<ColorsScreen> {
           nameArbic: "بني",
           nameEnglish: DataColors.brown),
       ColorsDetails(
-          color: Colors.grey,
-          sound: SoundColors.gray,
-          nameArbic: "رمادي",
-          nameEnglish: DataColors.gray),
+          color: Colors.orange,
+          sound: SoundColors.orange,
+          nameArbic: "برتقالي",
+          nameEnglish: DataColors.orange),
       ColorsDetails(
           color: Colors.green,
           sound: SoundColors.green,

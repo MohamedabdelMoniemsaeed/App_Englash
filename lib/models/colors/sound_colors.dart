@@ -7,4 +7,5 @@ abstract class SoundColors {
   static String red = 'sounds/colors/red.wav';
   static String white = 'sounds/colors/white.wav';
   static String yellow = 'sounds/colors/yellow.wav';
+  static String orange = 'sounds/colors/orange.wav';
 }

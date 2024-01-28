@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tuko/models/numbers/image_number.dart';
+import 'package:tuko/screen/abc/abc.dart';
 import 'package:tuko/screen/colors/colors_Screen.dart';
 import 'package:tuko/screen/family/family_screen.dart';
 import 'package:tuko/screen/numbers/numbers_Screen.dart';
@@ -48,12 +49,15 @@ class _HomeScreenState extends State<HomeScreen> {
               MaterialPageRoute(builder: (context) => const ColorsScreen()));
         },
       ),
-      // TapRow(
-      //   name: 'Phrases',
-      //   color: Colors.white54,
-      //   image: 'assets/images/backgroundimage.jpg',
-      //   onTap: () {},
-      // ),
+      TapRow(
+        name: 'A B C',
+        // color: Colors.white54,
+        image: 'assets/images/backgroundimage.jpg',
+        onTap: () {
+          Navigator.push(context,
+              MaterialPageRoute(builder: (context) => const AbcScreen()));
+        },
+      ),
     ];
     return Scaffold(
       backgroundColor: Theme.of(context).primaryColor,
